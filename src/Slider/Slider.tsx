@@ -306,7 +306,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     if (!allowTouchTrack && !TRACK_STYLE) {
       return thumbHitTest(e);
     }
-    if (!trackStyle) {
+    if ( allowTouchTrack ) {
       setCurrentValue(getOnTouchValue(e));
     }
     fireChangeEvent('onValueChange');
